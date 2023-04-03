@@ -1,0 +1,17 @@
+.mission-container {
+    display: flex;
+}
+.filter-container {
+    width: 200px;
+    margin-right: 1rem;
+}
+.missions {
+    width: calc(100% - 200px);
+}
+.mission-card {
+    margin: 1rem;
+    cursor: pointer;
+}
+.mission-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

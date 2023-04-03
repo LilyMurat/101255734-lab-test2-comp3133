@@ -1,0 +1,14 @@
+<div class="mission-container">
+    <app-missionfilter (filter)="onFilter($event)"></app-missionfilter>
+    <div class="missions">
+        <mat-card *ngFor="let mission of missions" (click)="onMissionSelect(mission)" class="mission-card">
+            <mat-card-header>
+                <mat-card-title>{{ mission.mission_name }} - <b style="color: blueviolet;">{{ mission.launch_year }}</b></mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>{{ mission.details }}</p>
+                <img [src]="mission.links?.mission_patch_small" alt="{{ mission.mission_name }} mission patch" style="height: 50px;width: 50px;">
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
